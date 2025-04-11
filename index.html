@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+
+
+<html lang="en">
+
+<head>
+
+  <meta charset="UTF-8">
+  <link rel = "icon" type = "image/jpg" href = "background/icon.jpg">
+  <title>[Taylor Swift Music Player]</title> <!-- 一般这里写唱片专辑名称 -->
+  <link rel="stylesheet" href="styles.css">
+  
+</head>
+
+
+<body>
+
+<div class="stars"></div>
+
+ <div class="container">
+  <div class="player">
+    <div>
+    <img class="album-cover" src="cover/default.png" alt="Album Cover">
+  	<div><img class="album-cover-base" src="background/disco.png" alt="Album Cover Base"></div></div>
+    <audio id="audio"></audio>
+	<div class="song-name" id="songName"></div> <!-- 添加显示歌曲名称的元素 -->
+	
+	<div class="time-display" id="timeDisplay">
+      <span class="current-time">0:00</span>
+      <span class="total-time">0:00</span>
+    </div>	
+	
+    <div class="progress" id="progressContainer">
+      <div class="progress-bar" id="progressBar"></div>
+    </div>
+
+    <div class="controls">
+      <button onclick="previousSong()">Previous</button>
+      <button onclick="playPauseMusic()">Play/Pause</button>
+      <button onclick="stopMusic()">Stop</button>
+      <button onclick="nextSong()">Next</button>
+    </div>
+	
+	<!-- 
+	value: 值
+	for: 相关联
+	label: 描述
+  	-->
+    <div class="playlist">
+      <label for="songList">Select a song：</label>
+      <select id="songList" onchange="changeSong()">
+        <option value="0">01 - 1989 (Taylor's Version)</option>
+        <option value="1">02 - 1989</option>
+        <option value="2">03 - Cornelia Street (live)</option>
+        <option value="3">04 - Daylight (live)</option>
+		<option value="4">05 - Death By A Thousand Cuts (live)</option>
+		<option value="5">06 - evermore</option>
+		<option value="6">07 - Fearless (Taylor's Version)</option>
+		<option value="7">08 - Fearless</option>
+		<option value="8">09 - folklore</option>
+		<option value="9">10 - Lover</option>
+		<option value="10">11 - Midnights (The Til Dawn Edition)</option>
+		<option value="11">12 - Red (Taylor's Version)</option>
+		<option value="12">13 - Red</option>
+		<option value="13">14 - reputation</option>
+		<option value="14">15 - Speak Now (Taylor's Version)</option>
+		<option value="15">16 - Speak Now</option>
+		<option value="16">17 - Sweeter Than Fiction</option>
+		<option value="17">18 - Taylor Swift</option>
+		<option value="18">19 - The Taylor Swift Holiday Collection</option>
+      </select>
+    </div>
+  </div>
+ </div>
+ 
+   <div class="hamburger-menu" onclick="toggleMenu()">
+    <div class="line"></div>
+    <div class="line"></div>
+    <div class="line"></div>
+  </div>
+
+  <nav id="menu">
+    <!-- 
+	  这段代码是一个超链接 <a>，它用于创建指向网页或网站的链接。
+	  比如说，href属性指定了链接的目标网址为 https://www.google.com，
+	  target="_blank"部分是一个属性，用于指示链接在新的浏览器窗口或标签页中打开。
+	-->
+    <a href="booklet/1989 (I).pdf" target="_blank">1989 (I)</a>
+    <a href="booklet/1989 (O).pdf" target="_blank">1989 (O)</a>
+    <a href="booklet/evermore (I).pdf" target="_blank">evermore (I)</a>
+	<a href="booklet/evermore (O).pdf" target="_blank">evermore (O)</a>
+	<a href="booklet/Fearless (I).pdf" target="_blank">Fearless (I)</a>
+	<a href="booklet/Fearless (O).pdf" target="_blank">Fearless (O)</a>
+	<a href="booklet/Fearless (Taylor's Version).pdf" target="_blank">Fearless (Taylor's Version)</a>
+	<a href="booklet/folklore (I).pdf" target="_blank">folklore (I)</a>
+	<a href="booklet/folklore (O).pdf" target="_blank">folklore (O)</a>
+	<a href="booklet/Lover.pdf" target="_blank">Lover</a>
+	<a href="booklet/Midnights (I).pdf" target="_blank">Midnights (I)</a>
+	<a href="booklet/Midnights (O).pdf" target="_blank">Midnights (O)</a>
+	<a href="booklet/Red (Taylor's Version).pdf" target="_blank">Red (Taylor's Version)</a>
+	<a href="booklet/Red.pdf" target="_blank">Red</a>
+	<a href="booklet/reputatio magazine (volume 1).pdf" target="_blank">reputatio magazine (volume 1)</a>
+	<a href="booklet/reputatio magazine (volume 2).pdf" target="_blank">reputatio magazine (volume 2)</a>
+	<a href="booklet/reputation.pdf" target="_blank">reputation</a>
+	<a href="booklet/Speak Now (Taylor's Version).pdf" target="_blank">Speak Now (Taylor's Version)</a>
+	<a href="booklet/Speak Now.pdf" target="_blank">Speak Now</a>
+	<a href="booklet/Taylor Swift - Flipbook.pdf" target="_blank">Taylor Swift - Flipbook</a>
+	<a href="booklet/Taylor Swift.pdf" target="_blank">Taylor Swift</a>
+	<a href="booklet/The Taylor Swift Holiday Collection.pdf" target="_blank">The Taylor Swift Holiday Collection</a>
+	<a href="booklet/The Tortured Poets Department.pdf" target="_blank">The Tortured Poets Department</a>
+  </nav>
+  
+<!-- 页脚 -->
+<footer>
+    &copy; Web Designer : Tao Wu <!-- &copy;符号: 显示版权符号（©） -->
+</footer> 
+  
+<script src="script.js"></script>
+  
+</body>
+
+</html>
